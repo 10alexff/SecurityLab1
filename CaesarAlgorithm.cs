@@ -26,7 +26,18 @@ namespace Lab1
 
             double Max = 0;
             int key = 0;
+            for (int i = 0; i < output.Length; i++)
+            {
+                // if (i < 70) { Console.WriteLine(i + "  " + outputs[i]); Console.WriteLine(); }
 
+                var partoftext = Utilites.PartOfText(output[i]);
+
+                if (partoftext > Max)
+                {
+                    key = i;
+                    Max = partoftext;
+                }
+            }
 
             Console.WriteLine(key);
 

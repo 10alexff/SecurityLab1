@@ -22,5 +22,20 @@ namespace Lab1
 
             return Encoding.UTF8.GetString(bytes);
         }
+
+        public static double PartOfText(string input)
+        {
+            int count = 0;
+
+            foreach (var ch in input.ToCharArray())
+            {
+                if (Char.IsLetter(ch) || Char.IsPunctuation(ch) || Char.IsWhiteSpace(ch))
+                    count++;
+            }
+
+            var result = count / input.Length;
+            return result;
+
+        }
     }
 }
