@@ -25,7 +25,8 @@ namespace MyApp
            "g1e3QAYQUFOGkof3MzK1sZKXIaOnIqPGRYD1UPC2AFHgNcDkMtHlw4PGFDKVQFOA8ZP0BRP1gNPlkCKw==";
         public static void Main(string[] args)
         {
-            Part1();
+           // Part1();
+             Part2();
         }
 
         public static void Part1()
@@ -44,7 +45,17 @@ namespace MyApp
             string inputBase64Decoded = ASCIIEncoding.ASCII.GetString(Convert.FromBase64String(task2));
             var arrayOFbyte = Convert.FromBase64String(task2);
             Vigenere vigenere = new Vigenere();
+            vigenere.Distance(arrayOFbyte);
             List<Result_Hamming> result_Hammings = vigenere.Get_Lenght_Key();
+            /*
+            for (int i = 0; i < result_Hammings.Count(); i++) 
+            {
+                var result = result_Hammings[i];
+                
+                Console.WriteLine(result.Key_Lenght + "  " + result.Distance1 + "  " + result.Distance2);
+            }
+              Console.ReadKey();
+            */
 
 
         }
