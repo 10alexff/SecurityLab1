@@ -44,7 +44,8 @@ namespace MyApp
             string inputBase64Decoded = ASCIIEncoding.ASCII.GetString(Convert.FromBase64String(task2));
             var arrayOFbyte = Convert.FromBase64String(task2);
             Vigenere vigenere = new Vigenere();
-            vigenere.Distance(arrayOFbyte);
+            List<Result_Hamming> result_Hammings = vigenere.Get_Lenght_Key();
+
 
         }
         public static void Part3()

@@ -8,6 +8,11 @@ namespace Lab1
 {
     public class Vigenere
     {
+        List<Result_Hamming> results = new List<Result_Hamming>();
+        public List<Result_Hamming> Get_Lenght_Key()
+        {
+            return results;
+        }
 
         public void Distance(byte[] bytearr)
         {
