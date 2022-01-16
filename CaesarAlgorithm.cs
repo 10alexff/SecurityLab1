@@ -16,7 +16,6 @@ namespace Lab1
             this.Input = input;
 
         }
-
         public string getDecrypt()
         {
             for (int i = 0; i < 255; i++)
@@ -28,10 +27,7 @@ namespace Lab1
             int key = 0;
             for (int i = 0; i < output.Length; i++)
             {
-                // if (i < 70) { Console.WriteLine(i + "  " + outputs[i]); Console.WriteLine(); }
-
                 var partoftext = Utilites.PartOfText(output[i]);
-
                 if (partoftext > Max)
                 {
                     key = i;

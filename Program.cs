@@ -16,6 +16,13 @@ namespace MyApp
             "5b7aa17405e435f17d5b7ab52d5b7aa1756595317445817585919176e5842175a564e17424452175659175e5953524f1758511754585e59545e53525" +
             "954521b177f565a5a5e595017535e4443565954521b177c56445e445c5e17524f565a5e5956435e58591b17444356435e44435e54565b1743524443441" +
             "7584517405f564352415245175a52435f5853174e5842175152525b174058425b5317445f584017435f52175552444317455244425b4319";
+        static string task2 = "G0IFOFVMLRAPI1QJbEQDbFEYOFEPJxAfI10JbEMFIUAAKRAfOVIfOFkYOUQFI15ML1kcJFUeYhA4IxAeKVQZL1VMOFg" +
+           "JbFMDIUAAKUgFOElMI1ZMOFgFPxADIlVMO1VMO1kAIBAZP1VMI14ANRAZPEAJPlMNP1VMIFUYOFUePxxMP19MOFgJbFsJNUMcLVMJbFkfbF8C" +
+           "IElMfgZNbGQDbFcJOBAYJFkfbF8CKRAeJVcEOBANOUQDIVEYJVMNIFwVbEkDORAbJVwAbEAeI1INLlwVbF4JKVRMOF9MOUMJbEMDIVVMP18eOB" +
+           "ADKhALKV4JOFkPbFEAK18eJUQEIRBEO1gFL1hMO18eJ1UIbEQEKRAOKUMYbFwNP0RMNVUNPhlAbEMFIUUALUQJKBANIl4JLVwFIldMI0JMK0IN" +
+           "KFkJIkRMKFUfL1UCOB5MH1UeJV8ZP1wVYBAbPlkYKRAFOBAeJVcEOBACI0dAbEkDORAbJVwAbF4JKVRMJURMOF9MKFUPJUAEKUJMOFgJbF4JNERM" +
+           "I14JbFEfbEcJIFxCbHIJLUJMJV5MIVkCKBxMOFgJPlWOzKkfbF4DbEMcLVMJPx5MRlgYOEAfdh9DKF8PPx4LI18LIFVCL18BY1QDL0UBKV4YY1RDfX" +
+           "g1e3QAYQUFOGkof3MzK1sZKXIaOnIqPGRYD1UPC2AFHgNcDkMtHlw4PGFDKVQFOA8ZP0BRP1gNPlkCKw==";
         public static void Main(string[] args)
         {
             Part1();
@@ -28,6 +35,20 @@ namespace MyApp
             CaesarAlgorithm caesarAlgorithm = new CaesarAlgorithm(text);
             var resultTask1 = caesarAlgorithm.getDecrypt();
             Console.WriteLine(resultTask1);
+
+        }
+
+        public static void Part2()
+        {
+
+            string inputBase64Decoded = ASCIIEncoding.ASCII.GetString(Convert.FromBase64String(task2));
+            var arrayOFbyte = Convert.FromBase64String(task2);
+            Vigenere vigenere = new Vigenere();
+            vigenere.Distance(arrayOFbyte);
+
+        }
+        public static void Part3()
+        {
 
         }
     }
