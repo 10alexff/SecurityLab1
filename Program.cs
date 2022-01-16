@@ -1,4 +1,4 @@
-﻿using ConsoleApp1;
+﻿using Lab1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
